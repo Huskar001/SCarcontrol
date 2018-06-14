@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.huskar.scarcontrol.MainActivity">
+
+    <Button
+        android:id="@+id/upbutton"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:text="前进"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/downbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="148dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="48dp"
+        android:text="后退"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upbutton" />
+
+    <Button
+        android:id="@+id/leftbutton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="48dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="48dp"
+        android:text="左转"
+        app:layout_constraintBottom_toBottomOf="@+id/downbutton"
+        app:layout_constraintEnd_toStartOf="@+id/rightbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/upbutton" />
+
+    <Button
+        android:id="@+id/rightbutton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:text="右转"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/leftbutton"
+        app:layout_constraintTop_toBottomOf="@+id/upbutton" />
+
+    <Button
+        android:id="@+id/speedupbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="196dp"
+        android:text="直线加速"
+        app:layout_constraintEnd_toStartOf="@+id/rotatebutton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upbutton" />
+
+    <Button
+        android:id="@+id/rotatebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="顺时针旋转"
+        android:layout_marginTop="196dp"
+        app:layout_constraintEnd_toStartOf="@+id/dancebutton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/speedupbutton"
+        app:layout_constraintTop_toBottomOf="@+id/upbutton"
+        tools:layout_editor_absoluteY="244dp" />
+
+    <Button
+        android:id="@+id/dancebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="探戈舞步"
+        android:layout_marginTop="196dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rotatebutton"
+        app:layout_constraintTop_toBottomOf="@+id/upbutton"
+        tools:layout_editor_absoluteY="244dp" />
+
+    <Button
+        android:id="@+id/lightupbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="亮灯"
+        android:onClick="onClickButton"
+        app:layout_constraintEnd_toStartOf="@+id/lightdownbutton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speedupbutton" />
+
+    <Button
+        android:id="@+id/lightdownbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="灭灯"
+        android:onClick="onClickButton"
+        app:layout_constraintBottom_toBottomOf="@+id/lightupbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/lightupbutton"
+        app:layout_constraintTop_toTopOf="@+id/lightupbutton" />
+
+
+</android.support.constraint.ConstraintLayout>
