@@ -222,7 +222,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.downbutton://d
                         time = 800;
-                        str = "d";
+                        str = "b";
                         break;
                     case R.id.speedupbutton://u 2
                         time = 1500;
@@ -462,7 +462,7 @@ public class MainActivity extends AppCompatActivity {
         // Stop the Bluetooth connection
         if (mConnectService != null) mConnectService.cancelAllBtThread();
         if (timeTask != null) timeTask.interrupt();
-        saveConfig();
+        // saveConfig();
         android.os.Process.killProcess(android.os.Process.myPid());
     }
 
